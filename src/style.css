@@ -1,190 +1,430 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  body{
-    background: #13aaeb;
-  }
-  
-  .container{
-    width: 100vw;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background: #eee;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+
+.container .app{
+  width: 250px;
+  height: 476px;
+  background-color: rgba(255, 255,255,1);
+  border-radius: 20px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 10px 10px 34px rgba(0,0,0,0.2)
+/*   margin: 3rem 0rem; */
+}
+
+.container .app .dateBx{
+/*   background-color: red; */
+  margin-bottom: 1rem;
+}
+
+.container .app .dateBx h1{
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.container .app .dateBx p{
+  font-size: 0.6rem;
+  opacity: 0.3;
+}
+
+.container .app-page-one .searchBx{
+/*   background-color: red; */
+}
+
+.container .app-page-one .searchBx a{
+  display: block;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(90deg,#439FFF,#2A79FD);
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #fff;
+  box-shadow: 0.3rem 0.4rem 0.7rem rgba(0,0,0,0.3);
+}
+
+.container .app-page-one .category ul{
+  list-style: none;
+/*   background: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0rem;
+}
+
+.container .app-page-one .category ul li{
+  font-size: 0.5rem;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.container .app-page-one .category ul li.active{
+  background: rgba(71,168,255,0.3);
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: rgba(34,114,253,1);
+  position: relative;
+}
+
+
+.container .app-page-one .category ul li.active::before{
+  content: "4";
+  position: absolute;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  line-height: 8px;
+  font-size: 0.3rem;
+  top: -0.1rem;
+  right: 0.2rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+}
+
+.container .app-page-one .TaskBxs{
+/*   background: red; */
+  margin-top: 0.7rem;
+  position: relative;
+}
+
+.container .app-page-one .TaskBxs .TaskBx{
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 0.4rem;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .leftBx{
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container .app-page-one{
-    width: 250px;
-    height: 476px;
-    background-color: rgba(255, 255,255,1);
-    border-radius: 17px;
-    padding: 1rem;
-    position: relative;
-  /*   margin: 3rem 0rem; */
-  }
-  
-  .container .app-page-one .dateBx{
-  /*   background-color: red; */
-    margin-bottom: 1rem;
-  }
-  
-  .container .app-page-one .dateBx h1{
-    font-size: 1.3rem;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
-  }
-  
-  .container .app-page-one .dateBx p{
-    font-size: 0.6rem;
-    opacity: 0.3;
-  }
-  
-  .container .app-page-one .searchBx a{
-    display: block;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    background: linear-gradient(90deg,#439FFF,#2A79FD);
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.7rem;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.user-img{
+  width: 13px;
+  border: 0.05rem solid #fff;
+  height: 13px;
+  border-radius: 50%;
+  display: block;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .leftBx h6{
+  font-size: 0.6rem;
+  font-weight:  600;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .leftBx p{
+  font-size: 0.4rem;
+  font-weight:  normal;
+  opacity: 0.6;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .rightBx{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .rightBx .users{
+  display: flex;
+}
+
+.container .app-page-one .TaskBxs .TaskBx .rightBx .users .user{
+  margin-left: -0.3rem;
+}
+
+
+.container .app-page-one .TaskBxs .TaskBx .rightBx .time{
+  font-size: 0.4rem; 
+}
+
+.addTask-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #2471FF;
+  padding: 0.6rem 0rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 1.3rem;
+}
+
+.addTask-btn a{
+  font-size: 0.7rem;
+  text-decoration: none ;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.addTask-btn a span{
+  background: #fff;
+  color: #2471FF;
+  padding: 0rem 0.4rem;
+  font-size: 1.3rem;
+  border-radius: 100%;
+}
+
+
+/* styling 2nd app page */
+
+.container .app-page-two{
+  padding: 0rem;
+}
+
+.container .app-page-two .dateBx{
+  padding: 1rem;
+}
+
+.container .app-page-two .contentBx{
+  width: 250px;
+  height:390px;
+  background:#2471FF;
+  border-radius: 20px;
+  position: relative;
+}
+
+.container .app-page-two .contentBx::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2rem;
+  margin-top: 0.8rem;
+  border-radius: 1rem;
+  height: 0.3rem;
+  transform: translate(-50%);
+  background: #fff;
+}
+
+.container .app-page-two .contentBx .inputBx{
+  width: 100%;
+/*   background: cyan; */
+  border-radius: 20px;
+  padding-top: 2rem;
+}
+
+.container .app-page-two .contentBx .inputBx input{
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,1);
+}
+
+.container .app-page-two .contentBx .inputBx input::placeholder{
+/*   padding-left: 0.3rem; */
+  color: rgba(255,255,255,0.3);
+}
+
+.container .app-page-two .contentBx .tags{
+/*   background: pink; */
+  border-bottom: 0.1rem solid rgba(255, 255,255,0.2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+
+.container .app-page-two .contentBx .tags .tag{
+  border-radius: 7px;
+  padding: 0.4rem;
+  cursor: pointer;
+/*   width: 25%; */
+}
+
+.container .app-page-two .contentBx .tags .tag p{
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.tag.add-tag{
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .app-page-two .contentBx .tags .tag.add-tag p{
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.container .app-page-two .contentBx .tags .tag:nth-child(1){
+   background: #D9E0C6;
+}
+
+.container .app-page-two .contentBx .tags .tag:nth-child(2){
+   background: #DDD1FC;
+}
+
+.container .app-page-two .contentBx .tags .tag:nth-child(3){
+   background: #F8C6C9;
+}
+
+.container .app-page-two .contentBx .tags .tag:nth-child(4){
+   background: #FADCB5;
+}
+
+.container .app-page-two .contentBx .tags .tag:nth-child(5){
+   background: #91B7FE;
+}
+
+
+/* styling checkbox */
+.container .app-page-two .checkBx{
+/*   background:red; */
+  padding: 1rem;
+   border-bottom: 0.1rem solid rgba(255, 255,255,0.2);
+}
+
+
+.container .app-page-two .checkBx .checks{  
+/*   background:pink; */
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.container .app-page-two .checkBx .checks .checkbox{
+  font-size: 0.5rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: #fff;
+}
+
+.container .app-page-two .checkBx p{
+  font-size: 0.8rem;
+  margin: 0rem 0rem 0.4rem 0rem;
+  color: #fff;
+}
+
+.container .app-page-two .checkBx .checks .checkbox .inner-circle.active{
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.container .app-page-two .checkBx .checks .circle{
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background: transparent;
+  border: 0.07rem solid rgba(255,255,255,0.5);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+/* syling invite section */
+.container .app-page-two .inviteBx{
+  padding: 1rem;
+}
+
+.container .app-page-two .inviteBx p{
+  font-size: 0.8rem;
+  margin: 0rem 0rem 0.4rem 0rem;
     color: #fff;
-    box-shadow: 0.3rem 0.4rem 0.7rem rgba(0,0,0,0.3);
-  }
-  
-  .container .app-page-one .category ul{
-    list-style: none;
-  /*   background: red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.4rem 0rem;
-  }
-  
-  .container .app-page-one .category ul li{
-    font-size: 0.5rem;
-    color: #000;
-    font-weight: 500;
-    cursor: pointer;
-    margin-top: 0.5rem;
-  }
-  
-  .container .app-page-one .category ul li.active{
-    background: rgba(71,168,255,0.3);
-    padding: 0.3rem 0.7rem;
-    border-radius: 1rem;
-    font-weight: 600;
-    color: rgba(34,114,253,1);
-    position: relative;
-  }
-  
-  
-  .container .app-page-one .category ul li.active::before{
-    content: "4";
-    position: absolute;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    line-height: 8px;
-    font-size: 0.3rem;
-    top: -0.1rem;
-    right: 0.2rem;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: red;
-  }
-  
-  .container .app-page-one .TaskBxs{
-  /*   background: red; */
-    margin-top: 0.7rem;
-    position: relative;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx{
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.8rem;
-     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    border-radius: 0.4rem;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .leftBx{
-      display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  
-  .user-img{
-    width: 13px;
-    border: 0.05rem solid #fff;
-    height: 13px;
-    border-radius: 50%;
-    display: block;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .leftBx h6{
-    font-size: 0.6rem;
-    font-weight:  600;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .leftBx p{
-    font-size: 0.4rem;
-    font-weight:  normal;
-    opacity: 0.6;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .rightBx{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .rightBx .users{
-    display: flex;
-  }
-  
-  .container .app-page-one .TaskBxs .TaskBx .rightBx .users .user{
-    margin-left: -0.3rem;
-  }
-  
-  
-  .container .app-page-one .TaskBxs .TaskBx .rightBx .time{
-    font-size: 0.4rem; 
-  }
-  
-  .addTask-btn {
-    position: absolute;
-    bottom: -0.8rem;
-    left: 0;
-    background: #2471FF;
-    padding: 0.6rem 0rem;
-    text-align: center;
-    width: 100%;
-    border-radius: 1.3rem;
-  }
-  
-  .addTask-btn a{
-    font-size: 0.7rem;
-    text-decoration: none ;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  
-  .addTask-btn a span{
-    background: #fff;
-    color: #2471FF;
-    padding: 0rem 0.4rem;
-    font-size: 1.3rem;
-    border-radius: 100%;
-  }
-  
+}
+
+.container .app-page-two .inviteBx .peopleBx{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .app-page-two .inviteBx .peopleBx .imgBx{
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.container .app-page-two .inviteBx .peopleBx .imgBx img{
+  width: 100%;
+  height: 100%;
+}
+
+.container .app-page-two .inviteBx .peopleBx .tag.add-tag{
+  background: #91B7FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container .app-page-two .inviteBx .peopleBx .tag.add-tag p{
+      font-size: 1.8rem;
+      color: #fff;
+  height: 32px;
+      line-height: 40px;
+}
+
+
+.container .app-page-two .btnBx{
+/*   background: red; */
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.container .app-page-two .btnBx .btn{
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.container .app-page-two .btnBx .btn.btn-two{
+  background: #fff;
+  padding: 0.4rem 0.6rem; 
+  color: #000;
+  font-weight: bold;
+  border-radius: 0.4rem;
+}
